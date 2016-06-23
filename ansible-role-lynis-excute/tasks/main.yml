@@ -1,0 +1,5 @@
+---
+#PLAYBOOK FOR EXCUTING LYNIS
+
+- name: Execution of the lynis script
+  script: lynis.sh

@@ -1,0 +1,5 @@
+- hosts: "{{ var_hosts }}"
+  user: "{{ var_remote_user }}"
+  become: "{{ var_become }}"
+  roles:
+     - { role: ansible-role-lynis-excute }

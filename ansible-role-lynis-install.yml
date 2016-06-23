@@ -1,0 +1,6 @@
+- hosts: "{{ var_hosts }}"
+  user: "{{ var_remote_user }}"
+  become: "{{ var_become }}"
+  connection: "{{ var_connection }}"
+  roles:
+     - { role: ansible-role-lynis-install }
