@@ -3,3 +3,5 @@
 
 - name: Execution of the lynis script
   script: lynis.sh
+- name: Fetching the report file from the server
+  synchronize: src=/var/log/lynis/ dest=/home/{{ var_remote_user }}/logs/lynis/ mode=pull
