@@ -49,6 +49,11 @@ Executing Playbook
 ``` 
 git clone https://github.com/retheshnair/ansible-role-lynis-repo
 
+eval $(ssh-agent)
+
+ssh-add /home/centos/.ssh/mykey.pem
+
+
 ansible-playbook -i local ansible-role-lynis-excute.yml
 
 ```
