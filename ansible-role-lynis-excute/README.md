@@ -14,10 +14,11 @@ Requirements
 Role Variables
 --------------
 
-```vars/main.yml
+```
+ansible-role-lynis-excute/vars/main.yml
 
-var_hosts: test
-var_remote_user: ec2-user 
+var_hosts: all
+var_remote_user: ansible 
 var_become: yes
 
 ```
@@ -48,6 +49,6 @@ Executing Playbook
 ``` 
 git clone https://github.com/retheshnair/ansible-role-lynis-repo
 
-ansible-playbook ansible-role-lynis-excute.yml
+ansible-playbook -i local ansible-role-lynis-excute.yml
 
 ```

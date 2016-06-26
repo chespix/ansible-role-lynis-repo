@@ -14,6 +14,9 @@ Role Variables
 --------------
 
 ```yml
+
+ansible-role-lynis-install/defaults/main.yml
+
 lynis_version: 2.2.0
 lynis_version_sha256sum: 64fe15be52fa77bce14250867da87e8c262fb0e9229517c4e2d2d5a38223bea4
 ```
@@ -41,6 +44,15 @@ lynis_cron_minute: 30
 ```
 Lynis cron job configuration. The report, report log, and report data are all written to the `lynis_log_directory`.
 
+```yml
+ansible-role-lynis-excute/vars/main.yml
+
+var_hosts: all
+var_remote_user: ansible
+var_become: yes
+
+```
+
 Dependencies
 ------------
 
@@ -60,6 +72,6 @@ Executing Playbook
 ``` 
 git clone https://github.com/retheshnair/ansible-role-lynis-repo
 
-ansible-playbook ansible-role-lynis-install.yml
+ansible-playbook -i local ansible-role-lynis-install.yml
 
 ```
