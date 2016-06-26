@@ -4,9 +4,8 @@
 - name: Execution of the lynis script
   script: lynis.sh
 - name: Creating directory for storing the logs 
-  local_action: file path=/home/{{ var_remote_user }}/logs/lynis/ state=directory owner={{ var_remote_user }}
-- name: Disbling requiretty in /etc/sudoers file for rsync to work
-#  command: sed -i 's/^Defaults    requiretty/#Defaults    requiretty/' /etc/sudoers
-  lineinfile: dest=/etc/sudoers state=present regexp="^#Defaults    requiretty"
+  local_action: file path=/home/{{ var_remote_user }}/logs/lynis/{{ inventory_hostname }} state=directory owner={{ var_remote_user }}
+- name: Disabling requiretty in /etc/sudoers for rsync to work
+  lineinfile: dest=/etc/sudoers state=present regexp='^Defaults    requiretty' line='#Defaults    requiretty' validate='visudo -cf %s'
 - name: Fetching the report file from the server
-  synchronize: src=/var/log/lynis/ dest=/home/{{ var_remote_user }}/logs/lynis/ mode=pull
+  synchronize: src=/var/log/lynis/ dest=/home/{{ var_remote_user }}/logs/lynis/{{ inventory_hostname }}/ mode=pull
