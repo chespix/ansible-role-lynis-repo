@@ -1,5 +1,5 @@
 var_hosts: test
-var_remote_user: ec2-user 
+var_remote_user: centos 
 var_become: yes
 var_connection: ssh
 var_gather_facts: yes
