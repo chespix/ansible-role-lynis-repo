@@ -17,8 +17,8 @@ Role Variables
 ```
 ansible-role-lynis-excute/vars/main.yml
 
-var_hosts: test
-var_remote_user: ec2-user 
+var_hosts: all
+var_remote_user: ansible 
 var_become: yes
 
 ```
