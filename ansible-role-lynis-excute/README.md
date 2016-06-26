@@ -6,7 +6,10 @@ Installs the [Lynis](https://cisofy.com/lynis/) security auditing tool on RHEL/C
 Requirements
 ------------
 
-None.
+```
+   Lynis should be already installed
+
+````
 
 Role Variables
 --------------
