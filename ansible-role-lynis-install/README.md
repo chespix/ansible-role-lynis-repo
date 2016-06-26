@@ -45,6 +45,8 @@ lynis_cron_minute: 30
 Lynis cron job configuration. The report, report log, and report data are all written to the `lynis_log_directory`.
 
 ```yml
+ansible-role-lynis-excute/vars/main.yml
+
 var_hosts: all
 var_remote_user: ansible
 var_become: yes
