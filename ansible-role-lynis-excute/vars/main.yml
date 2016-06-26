@@ -1,3 +1,3 @@
-var_hosts: test
-var_remote_user: centos
+var_hosts: all
+var_remote_user: ansible
 var_become: yes
