@@ -1,4 +1,4 @@
-Ansible Role: Lynis
+Ansible Excute Role: Lynis
 =========
 
 [![Build Status](https://travis-ci.org/tommarshall/ansible-role-lynis.svg?branch=master)](https://travis-ci.org/tommarshall/ansible-role-lynis)
