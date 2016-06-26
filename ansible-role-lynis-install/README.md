@@ -1,7 +1,7 @@
-Ansible Role: Lynis
-=========
+Ansible Role Install : Lynis
+============================
 
-[![Build Status](https://travis-ci.org/tommarshall/ansible-role-lynis.svg?branch=master)](https://travis-ci.org/tommarshall/ansible-role-lynis)
+
 
 Installs the [Lynis](https://cisofy.com/lynis/) security auditing tool on RHEL/CentOS or Debian/Ubuntu servers.
 
@@ -52,7 +52,14 @@ Example Playbook
 ```yml
 - hosts: all
   roles:
-     - { role: ansible-role-lynis }
+     - { role: ansible-role-lynis-install }
+```
+
+Executing Playbook
+-------------------
+``` 
+ansible-playbook ansible-role-lynis-install.yml
+
 ```
 
 License
