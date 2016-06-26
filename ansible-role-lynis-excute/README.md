@@ -23,7 +23,11 @@ var_become: yes
 Dependencies
 ------------
 
-None.
+
+```
+lynis should be already installed using ansible-role-lynis-install.yml
+
+```
 
 Example Playbook
 ----------------
