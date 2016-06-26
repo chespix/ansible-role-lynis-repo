@@ -58,6 +58,8 @@ Example Playbook
 Executing Playbook
 -------------------
 ``` 
+git clone https://github.com/retheshnair/ansible-role-lynis-repo
+
 ansible-playbook ansible-role-lynis-install.yml
 
 ```
