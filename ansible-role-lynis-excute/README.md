@@ -52,3 +52,10 @@ git clone https://github.com/retheshnair/ansible-role-lynis-repo
 ansible-playbook -i local ansible-role-lynis-excute.yml
 
 ```
+Report and Log Files 
+---------------------
+
+```
+Report and log files is located under /home/{{ var_remote_user }}/logs/lynis/{{ inventory_hostname }}/
+ 
+```
