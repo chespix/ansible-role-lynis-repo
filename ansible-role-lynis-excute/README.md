@@ -14,7 +14,8 @@ Requirements
 Role Variables
 --------------
 
-```ansible-role-lynis-excute/vars/main.yml
+```
+ansible-role-lynis-excute/vars/main.yml
 
 var_hosts: test
 var_remote_user: ec2-user 
