@@ -1,0 +1,3 @@
+var_hosts: all
+var_remote_user: ansible 
+var_become: yes
