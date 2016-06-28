@@ -57,20 +57,20 @@ var_become: yes
 Dependencies
 ------------
 
-None.
+"ansible" user must exist and configured in the hosts for Ansible communication.
 
 
 
 Executing Playbook
 -------------------
 ``` 
-git clone https://github.com/retheshnair/ansible-role-lynis-repo
+1) git clone https://github.com/retheshnair/ansible-role-lynis-repo
 
-eval $(ssh-agent) ; ssh-add /home/centos/.ssh/mykey.pem
+2) eval $(ssh-agent) ; ssh-add /home/centos/.ssh/mykey.pem
 
-Modified the local file to include the hosts required. 
+3) Modified the local file to include the hosts required. 
 
-ansible-playbook -i local ansible-role-lynis-install.yml
+4) ansible-playbook -i local ansible-role-lynis-install.yml
 
 ```
 
