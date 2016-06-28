@@ -2,54 +2,14 @@ Ansible Role Remove : Lynis
 ============================
 
 
-
 Removes the [Lynis](https://cisofy.com/lynis/) security auditing tool on RHEL/CentOS or Debian/Ubuntu servers.
 
 Requirements
 ------------
-
-None.
-
-Role Variables
---------------
-
-The variables should be similar to the install/execute repo.
-
-```yml
-
-ansible-role-lynis-remove/defaults/main.yml
-
-lynis_version: 2.2.0
+```
+   Lynis should be already installed
 ```
 
-```yml
-lynis_src_directory: /usr/local/src/
-```
-The directory to store the `.tar.gz` and Lynis src files.
-
-```yml
-lynis_dest_directory: /opt
-```
-The directory to hold the Lynis installation.
-
-```yml
-lynis_log_directory: /var/log/lynis
-```
-The directory for the Lynis logs. Used by the cron job. By default Lynis will output the report to `stdout` and log to `/var/log/lynis.log` and `/var/log/lynis-report.dat`.
-
-```yml
-ansible-role-lynis-excute/vars/main.yml
-
-var_hosts: all
-var_remote_user: ansible
-var_become: yes
-
-```
-
-Dependencies
-------------
-
-None.
 
 Example Playbook
 ----------------
@@ -64,7 +24,7 @@ Executing Playbook
 -------------------
 ``` 
 
-ansible-playbook -i local ansible-role-lynis-install.yml
+ansible-playbook -i local ansible-role-lynis-remove.yml
 
 ```
 
