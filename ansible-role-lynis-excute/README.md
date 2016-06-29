@@ -11,27 +11,6 @@ Requirements
 
 ````
 
-Role Variables
---------------
-
-```
-ansible-role-lynis-excute/vars/main.yml
-
-var_hosts: all
-var_remote_user: ansible 
-var_become: yes
-
-```
-
-
-Dependencies
-------------
-
-
-```
-lynis should be already installed using ansible-role-lynis-install.yml
-
-```
 
 Example Playbook
 ----------------
@@ -47,16 +26,11 @@ Example Playbook
 Executing Playbook
 -------------------
 ``` 
-git clone https://github.com/retheshnair/ansible-role-lynis-repo
-
-eval $(ssh-agent)
-
-ssh-add /home/centos/.ssh/mykey.pem
-
 
 ansible-playbook -i local ansible-role-lynis-excute.yml
 
 ```
+
 Report and Log Files 
 ---------------------
 
@@ -64,6 +38,7 @@ Report and Log Files
 Report and log files is located under /home/{{ var_remote_user }}/logs/lynis/{{ inventory_hostname }}/
  
 ```
+
 Sample Execution
 -----------------
 

@@ -1,0 +1,23 @@
+---
+#Playbook for removing Lynis
+
+- name: Removing of lynis cron
+  cron:
+    cron_file=lynis
+    state=absent
+
+- name: Removing of lynis logs
+  file: 
+    path={{ lynis_log_directory }}
+    state=absent
+
+- name: Removing of lynis files
+  file:
+    path={{ lynis_dest_directory }}/lynis
+    state=absent
+
+- name: Removing of lynis source file
+  file:
+    path={{ lynis_src_directory }}/lynis-{{ lynis_version }}
+    state=absent
+
