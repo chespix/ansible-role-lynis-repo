@@ -1,3 +1,3 @@
-var_hosts: all
-var_remote_user: ansible 
+var_hosts: "{{targets}}"
+var_remote_user: ubuntu
 var_become: yes
