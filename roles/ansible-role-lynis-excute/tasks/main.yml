@@ -3,9 +3,13 @@
 
 - name: Execution of the lynis script
   script: lynis.sh
+- name: get the username running the deploy
+  local_action: command whoami
+  sudo: no
+  register: local_username
 - name: Creating directory for storing the logs 
-  local_action: file path=/home/{{ var_remote_user }}/logs/lynis/{{ inventory_hostname }} state=directory owner={{ var_remote_user }}
+  local_action: file path=/home/{{ local_username.stdout }}/logs/lynis/{{ inventory_hostname }} state=directory owner={{ local_username.stdout }}
 - name: Disabling requiretty in /etc/sudoers for rsync to work
   lineinfile: dest=/etc/sudoers state=present regexp='^Defaults    requiretty' line='#Defaults    requiretty' validate='visudo -cf %s'
 - name: Fetching the report file from the server
-  synchronize: src=/var/log/lynis/ dest=/home/{{ var_remote_user }}/logs/lynis/{{ inventory_hostname }}/ mode=pull
+  synchronize: src=/var/log/lynis/ dest=/home/{{ local_username.stdout }}/logs/lynis/{{ inventory_hostname }}/ mode=pull
