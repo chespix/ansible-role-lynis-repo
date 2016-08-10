@@ -1,2 +1,4 @@
 *.retry
 inv/
+reports/auditReport.csv*
+reports/general_reports.csv*

@@ -3,7 +3,7 @@
 
 if [ -f general_reports.csv ];
 then 
- rm general_reports.csv
+ mv general_reports.csv general_reports.csv.$(date +%Y%m%d)
 fi
 
 # OS break out 
